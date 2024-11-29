@@ -1,0 +1,258 @@
+@charset "utf-8";
+
+.wrap {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: -2;
+    /* transform: translate(-50%,-50%); */
+}
+
+.click::after{
+    content: '';
+    width: 60px; height: 60px;
+    background-size: 100%;
+    background-image: url(../img/point1.gif);
+    position: absolute;
+    right: 0; top: 0;
+}
+.x_y {
+    display: flex;
+    left: 0;
+    top: 0;
+    width: 300px;
+}
+
+.wrap .wrap_img {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: url(../img/sub.jpg) center center/cover;
+    /* transform: translate(-50%,-50%); */
+}
+
+.wrap .couple img {
+    position: absolute;
+    top: 120px;
+    left: 500px;
+    z-index: 1;
+}
+
+.wrap .sub1 img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 1100px;
+    height: 980px;
+}
+
+.wrap .flash img {
+    mix-blend-mode: color-dodge;
+}
+
+.wrap .flash img:nth-child(1) {
+    position: absolute;
+    left: 350px;
+    bottom: 100px;
+}
+
+.wrap .flash img:nth-child(2) {
+    position: absolute;
+    top: 60px;
+    left: 450px;
+}
+
+.wrap .flash img:nth-child(3) {
+    position: absolute;
+    right: 550px;
+    bottom: 240px;
+}
+
+.f1_car {
+    position: absolute;
+    left: 80px;
+    top: 70px;
+    cursor: pointer;
+}
+
+.f1_car .f1_txtbox{
+    width: 450px;
+    height: 150px;
+    background: #fff;
+    position: absolute;
+    left: -50px;
+    top: 0;
+    display: none;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.f1_car .f1_txtbox p{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 30px;
+
+}
+
+.f1_car .f1_txtbox button{
+    width: 50px;
+    height: 20px;
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.racing_car {
+    position: absolute;
+    left: 50px;
+    bottom: 10px;
+    cursor: pointer;
+}
+
+.racing_car .racing_txtbox{
+    width: 450px;
+    height: 150px;
+    background: #fff;
+    position: absolute;
+    left: -30px;
+    top: 0;
+    display: none;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.racing_car .racing_txtbox p{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 30px;
+
+}
+
+.racing_car .racing_txtbox button{
+    width: 50px;
+    height: 20px;
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+}
+
+.group {
+    position: absolute;
+    left: 810px;
+    top: 200px;
+    z-index: 1;
+}
+
+.person img:first-child{
+    position: absolute;
+    left: 950px;
+    top: 290px;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.person img:nth-child(2){
+    position: absolute;
+    left: 945px;
+    top: 315px;
+    z-index: 2;
+    opacity: 0;
+    transition: .5s;
+}
+
+.person.on img:nth-child(2){
+    animation: breath_ani 1.5s ease-out forwards;
+    opacity: 1;
+}
+
+.mouse img{
+    position: absolute;
+    left: 980px;
+    top: 430px;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    z-index: 10;
+    transform: rotate(15deg);
+}
+
+
+
+
+@keyframes breath_ani {
+    0% {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-40%, 20px); 
+    }
+}
+
+.lifgt {
+    cursor: pointer;
+    background: #ccc;
+}
+
+.lifgt .left img {
+    position: absolute;
+    left: 750px;
+    top: 180px;
+}
+
+
+.lifgt .left img:first-child{
+    position: absolute;
+    left: 750px;
+    top: 382.5px;
+}
+
+.lifgt .left img:last-child{
+    display: none;
+}
+
+/* .lifgt .left:hover img:last-child{
+    display: block;
+} */
+
+.lifgt .left.on img:last-child{
+    display: block;
+}
+
+.lifgt .right img {
+    position: absolute;
+    left: 950px;
+    top: 150px;
+}
+
+.lifgt .right img:first-child{
+    position: absolute;
+    left: 1095.5px;
+    top: 480.4px;
+}
+.lifgt .right img:last-child{
+    display: none;
+}
+/* .lifgt .right:hover img:last-child{
+    display: block;
+} */
+.lifgt .right.on img:last-child{
+    display: block;
+}
+
+
